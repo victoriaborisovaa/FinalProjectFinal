@@ -4,7 +4,6 @@ Feature: Adding product to cart and completing order
   So that I can purchase the selected item
 
   @Smoke
-
   Scenario: Add Item to the Cart and Complete the Order
     Given the user is on the Product page
     When the user clicks on the "Add to cart" button

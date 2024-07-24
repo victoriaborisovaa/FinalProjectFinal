@@ -1,6 +1,5 @@
 package pageObjects;
 
-import beforeAfter.BeforeAfter;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -8,8 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class LoginPage extends BeforeAfter {
-    WebDriver driver;
+public class LoginPage {
+  private WebDriver driver;
 
     By usernameLog = By.id("user-name");
     By passwordLog = By.id("password");

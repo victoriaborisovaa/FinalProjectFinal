@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class HeaderAndFooterHomePage extends BeforeAfter {
-    WebDriver driver;
+    private WebDriver driver;
 
     By logo = By.id("header_container");
     By hamburgerButton = By.id("react-burger-menu-btn");

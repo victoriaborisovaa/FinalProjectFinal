@@ -5,17 +5,18 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.WebDriver;
 import pageObjects.LoginPage;
 
-public class LoginStepDefinition extends BeforeAfter {
-    public WebDriver driver;
-    public LoginPage loginPage;
+import static beforeAfter.BeforeAfter.*;
+
+
+public class LoginStepDefinition {
+   LoginPage loginPage = new LoginPage(BeforeAfter.driver);
 
 
     @Given("the user is on the login page")
     public void theUserIsOnTheLoginPage() {
-        driver.navigate().to("https://www.saucedemo.com/");
+        BeforeAfter.driver.get("https://www.saucedemo.com/");
     }
 
     @When("the user enters valid data {string} and {string}")
@@ -30,5 +31,4 @@ public class LoginStepDefinition extends BeforeAfter {
         driver.navigate().to("https://www.saucedemo.com/inventory.html");
         String actualTitle = driver.getTitle();
         Assert.assertEquals(ExpectedTitle, actualTitle);
-    }
-}
+    }}

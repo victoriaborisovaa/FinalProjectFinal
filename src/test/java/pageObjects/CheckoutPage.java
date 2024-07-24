@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 
 public class CheckoutPage {
 
-    WebDriver driver;
+    private WebDriver driver;
     By firstName = By.id("first-name");
     By lastName = By.id("last-name");
     By postalCode = By.id("postal-code");

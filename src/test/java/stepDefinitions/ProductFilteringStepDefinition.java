@@ -1,6 +1,8 @@
 package stepDefinitions;
 
 import beforeAfter.BeforeAfter;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -14,12 +16,14 @@ import pageObjects.CartPage;
 import pageObjects.HomePage;
 import pageObjects.LoginPage;
 
-public class ProductFilteringStepDefinition extends BeforeAfter {
+public class ProductFilteringStepDefinition  {
     public WebDriver driver;
     public LoginPage loginPage;
-    public CartPage cartPage;
-    public HomePage homePage;
+    public BeforeAfter beforeAfter = new BeforeAfter();
+
+
     By price = By.id("inventory_container");
+
 
     @Given("the user is on the product listing page")
     public void theUserIsOnTheProductListingPage() {
@@ -43,8 +47,7 @@ public class ProductFilteringStepDefinition extends BeforeAfter {
         WebElement filteredProduct = driver.findElement(By.xpath("//*[@id=\"item_4_img_link\"]/img"));
         wait.until(ExpectedConditions.visibilityOf(filteredProduct));
 
-        // Assuming there is a method to get the name of the first product after sorting
         String firstProductName = driver.findElement(By.className("inventory_item_name")).getText();
         Assert.assertTrue("The products are not sorted correctly", firstProductName.startsWith("A"));
-    }
-}
+    }}
+

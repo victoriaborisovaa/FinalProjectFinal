@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class FiltersHomePage extends BeforeAfter {
 
-    WebDriver driver;
+    private WebDriver driver;
     By filterBtn = By.xpath("//*[@id=\"header_container\"]/div[2]/div/span/select");
     By AtoZOption = By.xpath("//*[@id=\"header_container\"]/div[2]/div/span/select/option[1]");
     By ZtoAOption = By.xpath("//*[@id=\"header_container\"]/div[2]/div/span/select/option[2]");

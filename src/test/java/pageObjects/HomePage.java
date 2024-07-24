@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class HomePage {
-    WebDriver driver;
+    private WebDriver driver;
     By Tshirt = By.id("item_1_title_link");
     By BikeLight = By.id("add-to-cart-sauce-labs-bike-light");
     By Onesie = By.id("add-to-cart-sauce-labs-onesie");

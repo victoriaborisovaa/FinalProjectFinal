@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class HamburgerButtonHomePage extends BeforeAfter {
-    WebDriver driver;
+    private WebDriver driver;
 
     By hamburgerButton = By.id("react-burger-menu-btn");
     By allItemsBtn = By.id("inventory_sidebar_link");

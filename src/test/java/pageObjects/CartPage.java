@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class CartPage extends BeforeAfter {
-    WebDriver driver;
+    private WebDriver driver;
     By Tshirt = By.id("item_1_title_link");
     By BikeLight = By.id("add-to-cart-sauce-labs-bike-light");
     By Onesie = By.id("add-to-cart-sauce-labs-onesie");
